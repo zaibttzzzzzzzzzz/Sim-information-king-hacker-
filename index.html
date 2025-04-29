@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakSimInfo - Pakistani Number Lookup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="watermark">Created by Shahzaib</div>
+    
+    <div class="container">
+        <header>
+            <h1 class="neon-text">PakSimInfo</h1>
+            <p class="tagline">Find Pakistani SIM owner details instantly</p>
+        </header>
+
+        <div class="search-box">
+            <div class="input-group">
+                <input type="text" id="numberInput" placeholder="Enter Pakistani number (e.g. 03001234567)" maxlength="11">
+                <button id="searchBtn" class="blinking-btn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            <div class="validation-message" id="validationMessage"></div>
+        </div>
+
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+            <p>Searching database...</p>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <div class="result-header">
+                <h2>Number Information</h2>
+                <div class="result-actions">
+                    <button id="clearBtn"><i class="fas fa-trash"></i> Clear</button>
+                    <button id="shareBtn"><i class="fab fa-whatsapp"></i> Share</button>
+                </div>
+            </div>
+            <div class="result-content" id="resultContent">
+                <!-- Results will be displayed here -->
+            </div>
+            <div class="network-logo" id="networkLogo">
+                <!-- Network logo will appear here -->
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Lookup</h3>
+                <p>Get results in seconds</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-database"></i>
+                <h3>Updated Database</h3>
+                <p>Regularly refreshed data</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure</h3>
+                <p>Your searches are private</p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="searchSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3"></audio>
+    <audio id="resultSound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-interface-beep-221.mp3"></audio>
+
+    <footer>
+        <p>© 2023 PakSimInfo | Created by Shahzaib</p>
+        <p>This tool is for educational purposes only</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
